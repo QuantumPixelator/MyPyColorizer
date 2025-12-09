@@ -1,3 +1,5 @@
+#  GET INVOLVED: Check out the pinned issues. Good for beginners.
+
 # MyPyColorizer
 
 A very simple way to add color to your Python CLI apps.
