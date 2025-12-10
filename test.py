@@ -21,6 +21,47 @@ def test_bright_colors():
     for color_name in bright_colors:
         print(Color.colorize(color_name.lower(), f"This is {color_name.lower().replace('_', ' ')} text"))
 
+
+def test_color_and_background_combinations():
+    """Test foreground color on different background colors"""
+    print("\n=== Foreground and Background Combinations ===")
+
+    color = Color()
+    # White text on Red background
+    print(f"{color.WHITE}{color.RED_BG}White text on RED background{color.RESET}")
+
+    # Black text on Cyan background
+    print(f"{color.BLACK}{color.CYAN_BG}Black text on CYAN background{color.RESET}")
+
+    # Yellow text on Blue background with BOLD style
+    print(f"{color.BOLD_BRIGHT}{color.YELLOW}{color.BLUE_BG}Bold Yellow text on BLUE background{color.RESET}")
+
+    # Bright White text on Black background
+    print(f"{color.BRIGHT_WHITE}{color.BLACK_BG}Bright White text on BLACK background{color.RESET}")
+    print("Hi")
+
+
+def test_complex_styles():
+    """Test complex combinations of styles"""
+    print("\n=== Complex Style Combinations ===")
+
+    color = Color()
+    # Bold + Underline + Blue text
+    print(f"{color.BOLD_BRIGHT}{color.UNDERLINE}{color.BLUE}Bold and Underlined Blue Text{color.RESET}")
+
+    # Dim + Italic + Yellow text
+    print(f"{color.DIM}{color.ITALIC}{color.YELLOW}Dim and Italic Yellow Text{color.RESET}")
+
+    # Reverse + Magenta text
+    print(f"{color.REVERSE}{color.MAGENTA}Reversed Magenta Text{color.RESET}")
+
+    # Strikethrough + Bright Red text
+    # Note: Strikethrough may not be supported in all terminals.
+    print(f"{color.STRIKETHROUGH}{color.BRIGHT_RED}Strikethrough Bright Red Text{color.RESET}")
+    print("Hi")
+
+
+
 def test_styles():
     """Test text styles"""
     print("\n=== Text Styles ===")
@@ -54,6 +95,9 @@ if __name__ == "__main__":
     test_styles()
     test_combined()
     test_background()
+    test_complex_styles()
+    test_color_and_background_combinations()
+
 
     print("\n=== Test Complete ===")
     print("Note: Colors may not display correctly in all terminals.")
