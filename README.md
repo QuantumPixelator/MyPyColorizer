@@ -34,11 +34,21 @@ print(f"{Color.GREEN}This is green text.{Color.RESET}")
 # Combining styles
 color = Color()
 print(f"{color.ITALIC}{color.BRIGHT_BLUE}Styled text.{color.RESET}")
+
+# Flexible color names using colorize()
+print(Color.colorize("bright yellow", "This also works!"))
+
+# Combining multiple styles with colorize()
+styled = Color.colorize("bold bright", Color.colorize("underline", Color.colorize("blue", "Bold and Underlined Blue Text")))
+print(styled)
 ```
 
 ### Available Colors
 
+*** The colors can be upper/lowercase, or a combination. The app also handles spaces and dashes in the color name ***
+
 **Foreground Colors:**
+
 - BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE
 - BRIGHT_BLACK, BRIGHT_RED, BRIGHT_GREEN, BRIGHT_YELLOW, BRIGHT_BLUE, BRIGHT_MAGENTA, BRIGHT_CYAN, BRIGHT_WHITE
 
@@ -95,25 +105,8 @@ mypycolorizer/
 
 ## License
 
-# IDGAF License
+[MIT License](LICENSE)
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and its documentation files ("the Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software.
-
-**THE SOFTWARE IS PROVIDED "AS IS," WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.**
-
-**IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.**
-
-## Clear Conditions
-
-### Zero Requirement
-You are granted all permissions without any conditions. You do not need to retain, reproduce, or include any copyright notice or a copy of this license when you redistribute the Software.
-
-### Total Waiver of Liability
-By choosing to use, copy, or modify the Software in any way, you are agreeing to completely and permanently release the original author(s) from all liability. If anything goes wrong, you are entirely responsible.
-
----
-
-**END**
 
 ## Acknowledgments
 

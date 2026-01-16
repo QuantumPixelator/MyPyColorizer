@@ -51,12 +51,19 @@ class Color:
 
     @classmethod
     def colorize(cls, color, text):
-        return f'{getattr(cls, color.upper(), "")}{text}{cls.RESET}'
+        normalized = color.replace(" ", "_").replace("-", "_").upper()
+        return f'{getattr(cls, normalized, "")}{text}{cls.RESET}'
 
-# example use:
+
+# Examples:
+
+# Using colorize() for flexible color names and styles:
 # print(Color.colorize("red", "Hello, World!"))
+# print(Color.colorize("bright yellow", "This is bright yellow!"))
+# print(Color.colorize("bold bright", Color.colorize("underline", Color.colorize("blue", "Bold and Underlined Blue Text"))))
 
-# print(f"{Color.GREEN}This is green text.{Color.RESET}")
-
+# Direct attribute access (must use exact attribute names):
 # color = Color()
-# print(f"{color.ITALIC}{color.BRIGHT_BLUE}This is italic bright red.{color.RESET}")
+# print(f"{Color.GREEN}This is green text.{Color.RESET}")
+# print(f"{color.ITALIC}{color.BRIGHT_BLUE}This is italic bright blue.{color.RESET}")
+# print(f"{color.BOLD_BRIGHT}{color.YELLOW_BG}Bold bright text on yellow background.{color.RESET}")

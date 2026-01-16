@@ -37,8 +37,8 @@ def test_color_and_background_combinations():
     print(f"{color.BOLD_BRIGHT}{color.YELLOW}{color.BLUE_BG}Bold Yellow text on BLUE background{color.RESET}")
 
     # Bright White text on Black background
-    print(f"{color.BRIGHT_WHITE}{color.BLACK_BG}Bright White text on BLACK background{color.RESET}")
-    print("Hi")
+    print(f"{color.BRIGHT_WHITE}{color.RED_BG}Bright White text on BLACK background{color.RESET}")
+    print("This text is standard coloring.")
 
 
 def test_complex_styles():
@@ -48,7 +48,6 @@ def test_complex_styles():
     color = Color()
     # Bold + Underline + Blue text
     print(f"{color.BOLD_BRIGHT}{color.UNDERLINE}{color.BLUE}Bold and Underlined Blue Text{color.RESET}")
-
     # Dim + Italic + Yellow text
     print(f"{color.DIM}{color.ITALIC}{color.YELLOW}Dim and Italic Yellow Text{color.RESET}")
 
@@ -58,7 +57,7 @@ def test_complex_styles():
     # Strikethrough + Bright Red text
     # Note: Strikethrough may not be supported in all terminals.
     print(f"{color.STRIKETHROUGH}{color.BRIGHT_RED}Strikethrough Bright Red Text{color.RESET}")
-    print("Hi")
+    print("Hi there. This text is standard coloring.")
 
 
 
