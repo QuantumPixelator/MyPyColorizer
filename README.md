@@ -1,8 +1,6 @@
-#  GET INVOLVED: Check out the pinned issues. Good for beginners.
-
 # MyPyColorizer
 
-A very simple way to add color to your Python CLI apps.
+A simple way to add color to your Python CLI apps.
 
 ## Features
 
@@ -14,16 +12,12 @@ A very simple way to add color to your Python CLI apps.
 
 ## Installation
 
-```bash
-pip install mypycolorizer
-```
-
-## Usage
+Download the repo, and import the class:  ```from mypycolorizer.colorizer import Color as color```.
 
 ### Basic Usage
 
 ```python
-from mypycolorizer.colorizer import Color
+from mypycolorizer.colorizer import Color as color
 
 # Using the colorize method
 print(Color.colorize("red", "Hello, World!"))
